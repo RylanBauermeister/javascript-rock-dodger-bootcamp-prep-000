@@ -63,6 +63,7 @@ function createRock(x) {
     } else if(top > 380){
       rock.remove();
     }
+    window.requestAnimationFrame(moveRock);
   }
 
   ROCKS.push(rock)
