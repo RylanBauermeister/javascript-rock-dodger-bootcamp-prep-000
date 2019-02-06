@@ -53,14 +53,14 @@ function createRock(x) {
   rock.style.top = top
 
    GAME.append(rock);
-   rockInterval = setInterval(moveRock, 10)
+   var rockInterval = setInterval(moveRock, 10)
 
   function moveRock() {
     console.log(top);
     top += 1;
     rock.style.top = `${top}px`;
     if(checkCollision(rock) === true){
-      top = 0;
+      clearInterval(rockInterval);
       endGame();
     } else if(top > 380){
       rock.remove();
