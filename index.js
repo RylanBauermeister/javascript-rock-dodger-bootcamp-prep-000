@@ -59,7 +59,7 @@ function createRock(x) {
    GAME.append(rock);
    rockInterval = setInterval(function(){
      moveRock();
-   }, 100)
+   }, 1000)
 
 
   /**
@@ -67,7 +67,7 @@ function createRock(x) {
    * seems like a good pace.)
    */
   function moveRock() {
-    top += 10;
+    top += 1;
     rock.style.top = `${top}px`;
     if(checkCollision(rock) === true){
       clearInterval(rockInterval);
