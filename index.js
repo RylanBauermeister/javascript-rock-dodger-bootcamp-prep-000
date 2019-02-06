@@ -128,8 +128,7 @@ function moveDodgerLeft() {
 }
 
 function moveDodgerRight() {
-   var leftNumber = DODGER.style.left.replace('px', '');
-   var left = parseInt(leftNumber);
+   var left = positionToInteger(DODGER.style.left);
    if(left < 360){
       DODGER.style.left = `${left + 4}px`;
    }
