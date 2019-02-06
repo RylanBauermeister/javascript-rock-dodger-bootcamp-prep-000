@@ -70,7 +70,9 @@ function createRock(x) {
     top += 10;
     rock.style.top = `${top}px`;
     if(checkCollision(rock) === true){
-      ROCKS.remove();
+      ROCKS.forEach(function(rock){
+        rock.remove();
+      });
       endGame();
     } else if(top > 380){
       rock.remove();
