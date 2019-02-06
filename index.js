@@ -59,7 +59,7 @@ function createRock(x) {
    GAME.append(rock);
    rockInterval = setInterval(function(){
      moveRock();
-   }, 1000)
+   }, 10)
 
 
   /**
