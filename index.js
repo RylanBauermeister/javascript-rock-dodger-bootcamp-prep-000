@@ -87,7 +87,7 @@ function endGame() {
 }
 
 function moveDodger(e) {
-  console.log(e.which);
+  e.preventDefault();
    if(e.which === LEFT_ARROW){
      moveDodgerLeft();
    } else if(e.which === RIGHT_ARROW){
