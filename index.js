@@ -55,7 +55,6 @@ function createRock(x) {
    var rockInterval = setInterval(moveRock, 10)
 
   function moveRock() {
-    console.log(top);
     top += 1;
     rock.style.top = `${top}px`;
     if(checkCollision(rock) === true){
