@@ -52,29 +52,16 @@ function createRock(x) {
 
   rock.style.top = top
 
-  /**
-   * Now that we have a rock, we'll need to append
-   * it to GAME and move it downwards.
-   */
    GAME.append(rock);
    rockInterval = setInterval(function(){
      moveRock();
    }, 10)
 
-
-  /**
-   * This function moves the rock. (2 pixels at a time
-   * seems like a good pace.)
-   */
   function moveRock() {
     console.log(top);
     top += 1;
     rock.style.top = `${top}px`;
     if(checkCollision(rock) === true){
-      clearInterval(rockInterval);
-      ROCKS.forEach(function(displayRock){
-        displayRock.remove();
-      });
       endGame();
     } else if(top > 380){
       rock.remove();
@@ -82,8 +69,6 @@ function createRock(x) {
   }
 
   ROCKS.push(rock)
-
-  // Finally, return the rock element you've created
   return rock
 }
 
@@ -95,6 +80,8 @@ function createRock(x) {
  */
 function endGame() {
   clearInterval(gameInterval);
+  clearInterval(rockInterval);
+  
   alert("YOU LOSE!");
   START.style.display = 'auto';
 }
