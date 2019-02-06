@@ -94,6 +94,7 @@ function createRock(x) {
  */
 function endGame() {
   alert("YOU LOSE!");
+  START.style.display = 'auto';
 }
 
 function moveDodger(e) {
