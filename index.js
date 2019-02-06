@@ -52,7 +52,7 @@ function createRock(x) {
   rock.style.top = top
 
    GAME.append(rock);
-   var rockInterval = setInterval(moveRock, 10)
+   rock.rockInterval = setInterval(moveRock, 10)
 
   function moveRock() {
     top += 1;
