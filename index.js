@@ -57,10 +57,9 @@ function createRock(x) {
   function moveRock() {
     rock.style.top = `${top+=5}px`;
     if(checkCollision(rock) === true){
-      clearInterval(rock.rockInterval);
-      console.log(ROCKS);
       endGame();
     } else if(top > 380){
+      rock
       rock.remove();
     }
     window.requestAnimationFrame(moveRock);
@@ -78,7 +77,6 @@ function createRock(x) {
  */
 function endGame() {
   for(var i = 0; i < ROCKS.length; i++){
-    clearInterval(ROCKS[i].rockInterval);
     ROCKS[i].remove();
   }
   clearInterval(gameInterval);
