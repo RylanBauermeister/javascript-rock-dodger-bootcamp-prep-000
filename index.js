@@ -81,7 +81,7 @@ function createRock(x) {
     if(checkCollision(rock) === true){
       ROCKS.remove();
       endGame();
-    } else if(top == 360){
+    } else if(top > 380){
       rock.remove();
     }
   }
