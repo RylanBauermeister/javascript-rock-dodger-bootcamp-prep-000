@@ -67,7 +67,7 @@ function createRock(x) {
    * seems like a good pace.)
    */
   function moveRock() {
-    top += 2;
+    top += 10;
     rock.style.top = `${top}px`;
     if(checkCollision(rock) === true){
       ROCKS.remove();
