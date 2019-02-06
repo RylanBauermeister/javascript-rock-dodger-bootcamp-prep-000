@@ -55,7 +55,7 @@ function createRock(x) {
    window.requestAnimationFrame(moveRock);
 
   function moveRock() {
-    top += 1;
+    top += 30;
     rock.style.top = `${top}px`;
     if(checkCollision(rock) === true){
       clearInterval(rock.rockInterval);
