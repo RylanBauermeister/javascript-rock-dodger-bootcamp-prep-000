@@ -84,7 +84,6 @@ function endGame() {
   clearInterval(gameInterval);
   window.removeEventListener('keydown', moveDodger, true);
   alert("YOU LOSE!");
-  START.style.display = 'auto';
 }
 
 function moveDodger(e) {
