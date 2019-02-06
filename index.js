@@ -78,8 +78,8 @@ function createRock(x) {
  */
 function endGame() {
   for(var i = 0; i < ROCKS.length; i++){
-    ROCKS[i].remove();
     clearInterval(ROCKS[i].rockInterval);
+    ROCKS[i].remove();
   }
   clearInterval(gameInterval);
   window.removeEventListener('keydown', moveDodger, true);
