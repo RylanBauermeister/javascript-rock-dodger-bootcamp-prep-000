@@ -77,7 +77,7 @@ function createRock(x) {
  */
 function endGame() {
   for(var i = 0; i < ROCKS.length; i++){
-    console.log(ROCKS);
+    console.log(ROCKS[i]);
     ROCKS[i].remove();
   }
   clearInterval(gameInterval);
