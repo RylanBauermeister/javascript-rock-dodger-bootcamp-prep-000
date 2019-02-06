@@ -81,7 +81,7 @@ function createRock(x) {
 function endGame() {
   clearInterval(gameInterval);
   clearInterval(rockInterval);
-  
+  window.removeEventListener
   alert("YOU LOSE!");
   START.style.display = 'auto';
 }
