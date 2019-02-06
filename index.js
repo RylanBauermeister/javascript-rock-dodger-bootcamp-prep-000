@@ -70,6 +70,7 @@ function createRock(x) {
     top += 10;
     rock.style.top = `${top}px`;
     if(checkCollision(rock) === true){
+      clearInterval(rockInterval);
       ROCKS.forEach(function(rock){
         rock.remove();
       });
