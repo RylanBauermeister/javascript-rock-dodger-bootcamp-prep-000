@@ -58,7 +58,7 @@ function createRock(x) {
     top += 1;
     rock.style.top = `${top}px`;
     if(checkCollision(rock) === true){
-      clearInterval(rockInterval);
+      clearInterval(rock.rockInterval);
       console.log(ROCKS);
       endGame();
     } else if(top > 380){
